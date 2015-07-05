@@ -40,13 +40,12 @@ protected:
     virtual void loopEvent(int type) ;
     // 連続で同じイベントが起動された場合に最後に実行される処理
     // ※ 厳密にはイベントが最後に起動された次のフレームに実行される
-    virtual void endEvent(int type) {}
+    virtual void endEvent(int type);
 private:
     std::string  text;
     unsigned int textLength;
     unsigned int textCursor;
     bool         textFinished;
-    bool         textPaused;
 };
 
 

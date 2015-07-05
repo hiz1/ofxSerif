@@ -19,9 +19,6 @@ void ofxSerif::startEvent(int type) {
         case OFXSERIF_SPEEDUP:
             loopEvent(OFXSERIF_UPDATE);
             break;
-        case OFXSERIF_SKIP:
-            textCursor = textLength;
-            break;
         case OFXSERIF_NEXTPAGE:
             if(textCursor >= textLength) {
                 textFinished = true;
@@ -44,7 +41,15 @@ void ofxSerif::loopEvent(int type) {
         case OFXSERIF_SPEEDUP:
             loopEvent(OFXSERIF_UPDATE);
             break;
+        case OFXSERIF_SKIP:
+            textCursor = textLength;
+            break;
         default:
             break;
     }
+}
+
+// 連続で同じイベントが起動された場合に最後に実行される処理
+// ※ 厳密にはイベントが最後に起動された次のフレームに実行される
+void ofxSerif::endEvent(int type) {
 }
