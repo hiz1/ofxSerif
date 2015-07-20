@@ -10,6 +10,11 @@
 
 #include <iostream>
 
+const int OFXSERIF_UPDATE   = 0;
+const int OFXSERIF_SPEEDUP  = 1;
+const int OFXSERIF_SKIP     = 2;
+const int OFXSERIF_NEXTPAGE = 3;
+
 // 連続で同じイベントが起動された場合に初回のみ実行される処理
 void ofxSerif::startEvent(int type) {
     switch (type) {

@@ -14,10 +14,10 @@
 #include "utf8helper.h"
 #include "ofxEventAction.h"
 
-extern const int OFXSERIF_UPDATE   = 0;
-extern const int OFXSERIF_SPEEDUP  = 1;
-extern const int OFXSERIF_SKIP     = 2;
-extern const int OFXSERIF_NEXTPAGE = 3;
+extern const int OFXSERIF_UPDATE;
+extern const int OFXSERIF_SPEEDUP;
+extern const int OFXSERIF_SKIP;
+extern const int OFXSERIF_NEXTPAGE;
 
 class ofxSerif : public ofxEventAction {
 public:
